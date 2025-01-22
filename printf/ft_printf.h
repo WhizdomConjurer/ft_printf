@@ -6,7 +6,7 @@
 /*   By: whi <whi@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:17:04 by whi               #+#    #+#             */
-/*   Updated: 2025/01/22 16:40:30 by whi              ###   ########.fr       */
+/*   Updated: 2025/01/22 20:56:54 by whi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ void	ft_prozess(t_count main_data, int z);
 void	ft_print_char(t_count main_data, int x);
 void	ft_printstr(t_count main_data, char *str);
 void	ft_print_percent(t_count main_data);
+void	ft_print_ptr(t_count main_data, unsigned long long ptr);
+void	ft_print_ptr_v2(t_count main_data, unsigned long long ptr);
+void	ft_put_char(t_count main_data, char x);
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: whi <whi@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:12:38 by whi               #+#    #+#             */
-/*   Updated: 2025/01/22 16:38:54 by whi              ###   ########.fr       */
+/*   Updated: 2025/01/22 21:18:21 by whi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ void	ft_prozess(t_count main_data, int z)
 		ft_print_percent(main_data);
 	else if (main_data.str[z] == 's')
 		ft_printstr(main_data, va_arg(main_data.args, char *));
+	else if (main_data.str[z] == 'p')
+		ft_print_ptr(main_data, va_arg(main_data.args, unsigned long long));
+	
 
 	return ;
 }
@@ -54,20 +57,4 @@ int	ft_printf(const char *str, ...)
 		x++;
 	}
 	return (main_data.count);
-}
-
-int main(void)
-{
-	char p;
-	int i;
-
-	p = 'c';
-	i = 0;
-	(void)i;
-	i = printf("printf: %c\n" , p);
-	// printf("printf: %i\n" , i);
-	i = ft_printf("ft_printf: %c\n" , p);
-	// ft_printf("ft_printf: %i\n" , i);
-	
-	return (0);
 }

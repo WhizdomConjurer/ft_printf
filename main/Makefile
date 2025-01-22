@@ -28,11 +28,13 @@ $(NAME): $(OBJS)
 clean:
 	@rm -f $(OBJS)
 	@$(MAKE) -C $(LIBFT_DIR) clean
+	@$(MAKE) -C $(PRINTF_DIR) clean
 	@echo "🧹 Objektdateien entfernt"
 
 fclean: clean
 	@rm -f $(NAME)
 	@$(MAKE) -C $(LIBFT_DIR) fclean
+	@$(MAKE) -C $(PRINTF_DIR) fclean
 	@echo "🗑️ Alles entfernt"
 
 re: fclean all
