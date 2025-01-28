@@ -6,7 +6,7 @@
 /*   By: whi <whi@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:12:38 by whi               #+#    #+#             */
-/*   Updated: 2025/01/22 21:18:21 by whi              ###   ########.fr       */
+/*   Updated: 2025/01/22 22:14:24 by whi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,12 @@ void	ft_prozess(t_count main_data, int z)
 		ft_printstr(main_data, va_arg(main_data.args, char *));
 	else if (main_data.str[z] == 'p')
 		ft_print_ptr(main_data, va_arg(main_data.args, unsigned long long));
-	
-
+	else if (main_data.str[z] == 'd' || main_data.str[z] == 'i')
+		ft_print_nbr(main_data, va_arg(main_data.args, int));
+	else if (main_data.str[z] == 'x' || main_data.str[z] == 'X')
+		ft_print_hexa(main_data, va_arg(main_data.args, unsigned int), main_data.str[z]);
+	else if (main_data.str[z] == 'u')
+		ft_print_unsignet_int(main_data, va_arg(main_data.args, unsigned int));
 	return ;
 }
 

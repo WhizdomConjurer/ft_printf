@@ -12,7 +12,10 @@ LIBFT_DIR := ../libft
 LIBFT := $(LIBFT_DIR)/libft.a
 
 SRCS = ft_printf.c \
-			ft_print_general.c
+			ft_print_general.c \
+			ft_print_ptr.c \
+			ft_print_unsigned.c \
+			ft_print_hexa.c
 
 OBJS= ${SRCS:.c=.o}
 

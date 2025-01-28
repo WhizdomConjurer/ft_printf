@@ -6,12 +6,13 @@
 /*   By: whi <whi@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 15:16:40 by whi               #+#    #+#             */
-/*   Updated: 2025/01/22 17:07:29 by whi              ###   ########.fr       */
+/*   Updated: 2025/01/22 23:43:02 by whi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 void	ft_print_percent(t_count main_data)
 {
@@ -35,4 +36,13 @@ void	ft_printstr(t_count main_data, char *str)
 		main_data.count++;
 		i++;
 	}
+}
+
+void	ft_print_nbr(t_count main_data, int x)
+{
+	char	*num;
+
+	num = ft_itoa(x);
+	ft_printstr(main_data, num);
+	free(num);
 }
